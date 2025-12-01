@@ -29,7 +29,7 @@ def load_config() -> Dict[str, Any]:
         with CONFIG_PATH.open("r", encoding="utf-8") as fh:
             return json.load(fh)
     except (FileNotFoundError, json.JSONDecodeError) as exc:
-        print(f"[EcoSense] Configuration error: {exc}")
+        print(f"[GreenGuard AI] Configuration error: {exc}")
     return {}
 
 CONFIG = load_config()
@@ -168,7 +168,7 @@ def render_tip_card() -> None:
     ensure_daily_tip()
     tip_prefix = C["TEXT_CONFIG"].get("DailyTipPrefix", "Tip:")
     st.markdown(
-        f"<div class='tip-card'>**{tip_prefix}**<br><em>{st.session_state.daily_tip}</em></div>",
+        f"<div class='tip-card'>{tip_prefix}<br><em>{st.session_state.daily_tip}</em></div>",
         unsafe_allow_html=True,
     )
 

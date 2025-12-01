@@ -1,5 +1,5 @@
 """
-Waste Scanner page for EcoSense AI.
+Waste Scanner page for GreenGuard AI.
 
 The scanner looks for common contamination cues (grease, black plastic,
 plastic film, lined paper cups, etc.) using lightweight image heuristics

@@ -1,9 +1,9 @@
-## GreenGuard AI / EcoSense AI – Local Sustainability Assistant
+## GreenGuard AI / GreenGuard AI – Local Sustainability Assistant
 
-EcoSense AI (in the `GreenGuard AI` folder) is a local-first sustainability assistant built with **Streamlit**.  
+GreenGuard AI (in the `GreenGuard AI` folder) is a local-first sustainability assistant built with **Streamlit**.  
 It bundles:
 
-- **EcoSense Home**: a simple dashboard with eco tips and an integrated chat assistant powered by **Ollama**.
+- **GreenGuard Home**: a simple dashboard with eco tips and an integrated chat assistant powered by **Ollama**.
 - **🟢 Carbon Quick Check**: a short questionnaire that highlights your biggest emission sources and suggests 3 high‑impact actions.
 - **♻ Waste Scanner**: upload a photo of an item to get guidance on whether it’s recyclable, needs rinsing, or should go to general waste (using lightweight image heuristics, not a heavy CV model).
 
@@ -13,7 +13,7 @@ It bundles:
 
 - **Python**: 3.9 or newer (3.10+ recommended).
 - **pip**: Python package manager.
-- **Ollama** (optional but recommended, for the EcoSense chat assistant):
+- **Ollama** (optional but recommended, for the GreenGuard chat assistant):
   - Install Ollama from their website.
   - Make sure the `ollama` service is running on your machine.
   - Pull the configured model (as per `appjson.json`):
@@ -79,11 +79,11 @@ pip install streamlit pandas pillow numpy
 
 4. Your browser should open automatically at a URL like `http://localhost:8501`.  
    There you’ll see:
-   - The EcoSense AI home screen with:
+   - The GreenGuard AI home screen with:
      - App title and subtitle.
      - Feature cards for **Carbon Quick Check** and **Waste Scanner**.
      - A rotating **daily eco tip**.
-     - The sidebar **EcoSense AI** chat (if Ollama is available).
+     - The sidebar **GreenGuard AI** chat (if Ollama is available).
 
 5. Use the buttons on the main page to:
    - Open **Carbon Quick Check** (answer questions, view impact bars and actions).
