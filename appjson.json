@@ -1,0 +1,64 @@
+{
+  "pageconfig": {
+    "Title": "EcoSense AI",
+    "Icon": "🌿",
+    "Layout": "centered",
+    "SidebarState": "expanded"
+  },
+
+  "style": {
+    "StyleCss": "\n    <style>\n    :root {\n        --bg: #F4FFF4;\n        --card: #FFFFFF;\n        --accent: #4CAF50;\n        --muted: #2E7D32;\n        --border: #D9EFD9;\n        --shadow: rgba(0,0,0,0.06);\n    }\n    html, body, [class*=\"stApp\"] {\n        background-color: var(--bg);\n    }\n    .title {\n        text-align: center;\n        color: var(--muted);\n        font-size: 48px;\n        font-weight: 800;\n        margin-bottom: -6px;\n        letter-spacing: -0.6px;\n    }\n    .subtitle {\n        text-align: center;\n        font-size: 16px;\n        color: var(--accent);\n        margin-bottom: 28px;\n    }\n    /* Streamlit-specific column styling to ensure cards are full-width within the column */\n    .stContainer {\t\n        padding-left: 0;\n        padding-right: 0;\n    }\n    /* Card layout */\n    .feature-card {\n        background-color: var(--card);\n        border: 1px solid var(--border);\n        padding: 26px;\n        border-radius: 20px;\n        /* Removed fixed width to allow columns to manage size */\n        width: 100%;\t\n        min-height: 200px; /* Added min height for visual balance */\n        display: flex; /* Flex properties to arrange content */\n        flex-direction: column;\n        box-shadow: 0 8px 20px var(--shadow);\n        transition: transform 0.18s ease, box-shadow 0.18s ease;\n        transform: translateY(45px);\n    }\n    .feature-card:hover { transform: translateY(-6px); box-shadow: 0 12px 30px var(--shadow); }\n    .feature-title { font-size: 20px; font-weight: 700; color: var(--muted); margin-bottom: 8px; }\n    .feature-desc { color: #4a774a; margin-bottom: 14px; flex-grow: 1; /* Pushes button to the bottom */ }\n    .stButton>button {\n        background: linear-gradient(90deg, var(--accent), #81C784) !important;\n        color: white !important;\n        border: none !important;\n        padding: 10px 14px !important;\n        border-radius: 12px !important;\n        font-weight: 701 !important;\n        cursor: pointer !important;\n        width: 100%; /* Make button fill card width */\n    }\n\n    .tip-card {\n        background-color: var(--card);\n        border-left: 6px solid var(--accent);\n        padding: 22px;\n        margin: 18px auto;\n        border-radius: 12px;\n        font-style: italic;\n        font-size: 20px;\n        max-width: 820px;\n        color: #225e33;\n        box-shadow: 0 8px 20px var(--shadow);\n        text-align: center;\n    }\n\n    .chat-history {\n        max-height: 260px;\n        overflow-y: auto;\n        padding: 10px;\n        width: 100%;\n    }\n    .bubble-user {\n        background: rgba(76,175,80,0.08);\n        border: 1px solid rgba(76,175,80,0.12);\n        padding: 10px 12px;\n        margin-bottom: 10px;\n        border-radius: 12px;\n        max-width: 78%;\n        color: #175a2a;\n        margin-left: auto; /* Aligns user message to the right */\n    }\n    .bubble-ai {\n        background: #f3fff4;\n        border: 1px dashed rgba(46,125,50,0.08);\n        padding: 10px 12px;\n        margin-bottom: 10px;\n        border-radius: 12px;\n        max-width: 78%;\n        color: #0f3f1e;\n    }\n    /* NEW STYLES FOR SIDEBAR CHAT INPUT/BUTTON */\n    [data-testid=\"stSidebar\"] [data-testid=\"textInputRoot\"] input {\n        border-radius: 12px;\n        border: 1px solid #C8E6C9; /* Light green border */\n        padding: 10px;\n    }\n    [data-testid=\"stSidebar\"] [data-testid=\"baseButton-secondary\"] {\n        background-color: #81C784 !important; /* Light green background */\n        color: white !important;\n        border-radius: 12px !important;\n        border: none !important;\n        height: 48px;\n        font-weight: 700 !important;\n        transition: background-color 0.1s;\n    }\n    [data-testid=\"stSidebar\"] [data-testid=\"baseButton-secondary\"]:hover {\n        background-color: #66BB6A !important; /* Slightly darker green on hover */\n    }\n    /* END NEW STYLES */\n\n    /* Wider sidebar for chatbot */\n    [data-testid=\"stSidebar\"] {\n       width: 40vw !important; \n min-width: 40vw !important;\n        max-width: 40vw !important;\n    }\n\n    /* responsive */\n    @media (max-width: 880px) {\n        /* No longer needed due to st.columns responsiveness */\n        /* .features-row { flex-direction: column; align-items:center; } */\n    }\n    </style>\n"
+  },
+
+  "text": {
+    "AppTitle": "EcoSense AI",
+    "AppSubtitle": "Your personalized guide to a greener lifestyle — simple, practical, trustworthy.",
+    "FooterNote": "Running EcoSense AI locally via Ollama.",
+
+    "Tools": {
+      "CarbonCheck": {
+        "Title": "🟢 Carbon Quick Check",
+        "Description": "Answer 5 quick questions. We'll show your biggest emissions source and 3 high-impact actions.",
+        "StartButton": "Start Carbon Check"
+      },
+      "WasteScanner": {
+        "Title": "♻ Waste Scanner",
+        "Description": "Upload a photo and instantly learn how to dispose of or reuse the item responsibly.",
+        "StartButton": "Open Waste Scanner"
+      }
+    },
+
+    "Navigation": {
+      "BackToHome": "← Back to Home"
+    },
+
+    "DailyTipPrefix": "🌱 Today's Eco Tip:"
+  },
+
+  "tips": [
+    "Setting your AC to 24°C can save ~5 kg CO₂ per week.",
+    "One meat-free day weekly cuts your food emissions noticeably.",
+    "Unplug idle chargers to reduce phantom energy waste.",
+    "Carry a reusable bottle to avoid daily plastic waste."
+  ],
+
+  "ollama": {
+    "OllamaModel": "phi3:mini",
+    "OllamaPrompt": "You are EcoSense AI, a friendly, practical sustainability assistant.\n\nGoals:\n- Give clear, specific, and realistic suggestions to reduce a person's environmental impact.\n- Prioritize high-impact actions (energy use, transport, food, and waste).\n- Adapt your advice to the user's situation (e.g. country, housing type, budget).\n\nStyle:\n- Be concise and structured (use short paragraphs or bullet points).\n- Avoid guilt-tripping; be encouraging, practical, and non-judgmental.\n- When unsure, say so and suggest how the user could check locally (e.g. city recycling rules).\n\nNever claim to access real\u2011time data or control devices. If a question is outside sustainability or environment topics, answer briefly and then gently redirect back to helpful eco actions."
+  },
+  
+  "AI": {
+      "Header": "🌳 Ask EcoSense AI",
+      "InputPlaceholder": "Ask: Can I recycle a pizza box?",
+      "SendButton": "Send",
+      "ThinkingMessage": "Thinking...",
+      "AiName": "EcoSense AI",
+      "UserName": "You",
+      "Styles": {
+          "SidebarHeaderColor": "#2E7D32",
+          "InputBorderColor": "#C8E6C9",
+          "ButtonBgColor": "#81C784",
+          "ButtonHoverColor": "#66BB6A"
+      }
+  }
+}
